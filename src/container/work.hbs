@@ -38,8 +38,12 @@
                             {{#each projects}}
                             <li>
 
-                                <div>{{>link text=name href=url blank=true noLane=true}}</div>
-                                <b>{{company.name}}</b>
+                                <div>{{>link text=name href=url blank=true noLine=true}}</div>
+                                <b>
+                                    {{#if company.name}}
+                                    {{else}}
+                                    {{/if}}
+                                </b>
                                 <br>
                                 <div>
                                     <p>{{about}}</p>
@@ -48,12 +52,27 @@
                                 <em>Project stacks({{stackAmount}})</em>
                                 <br>
                                 <div>
-                                    {{stacks}}
+                                    <ul>
+                                        {{#each stacks}}
+                                        <li>{{name}}</li>
+                                        {{/each}}
+                                    </ul>
                                 </div>
                                 <br>
-                                <em>Project awards</em>
+                                <div>
+                                    <em>
+                                        Project awards ({{awardAmount}})
+                                    </em>
+                                </div>
                                 <br>
-                                <div>{{awards}}</div>
+                                <div>
+                                    <ul>
+                                        {{#each awards }}
+                                        <li>{{name}}</li>
+                                        {{/each}}
+                                    </ul>
+
+                                </div>
                             </li>
                             {{/each}}
                         </ul>

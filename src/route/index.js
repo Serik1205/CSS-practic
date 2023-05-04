@@ -201,65 +201,63 @@ router.get("/education", function (req, res) {
     },
     footer,
   })
-
-  router.get("/work", function (req, res) {
-    //             ↙ cюди вводимо назву файлу з сontainer
-    res.render(`work`, {
-      // ↙ сюди вводимо JSON дані
-      layout: `big`,
-      page: {
-        title: `Resume | Work`,
-      },
-      header,
-      main: {
-        works: [
-          {
-            position: `Junior Fullstack Developer `,
-            company: {
-              name: `IT Brains`,
-              url: `https://it-brains.com.ua/`,
-            },
-            duration: {
-              from: `10.10.2022`,
-              to: null,
-            },
-            projectAmount: 3,
-            project: [
-              {
-                name: `Resume`,
-                url: `http://dobrava.com.ua/`,
-                about: `Very useful information`,
-                stackAmount: 4,
-                stacks: [
-                  {
-                    name: `React.js`,
-                  },
-                  {
-                    name: `HTML/CSS`,
-                  },
-                  {
-                    name: `Nodejs`,
-                  },
-                ],
-                awardAmount: 5,
-                awards: [
-                  {
-                    name: `A lot of achievements`,
-                  },
-                  {
-                    name: `Diploma for creating a very important project`,
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    },
-
-
-      footer,
 })
+
+router.get("/work", function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render(`work`, {
+    // ↙ сюди вводимо JSON дані
+    layout: `big`,
+    page: {
+      title: `Resume | Work`,
+    },
+    header,
+    main: {
+      works: [
+        {
+          position: `Junior Fullstack Developer `,
+          company: {
+            name: `IT Brains`,
+            url: `https://it-brains.com.ua/`,
+          },
+          duration: {
+            from: `10.10.2022`,
+            to: null,
+          },
+          projectAmount: 3,
+          projects: [
+            {
+              name: `Resume`,
+              url: `http://dobrava.com.ua/`,
+              about: `Very useful information`,
+              stackAmount: 4,
+              stacks: [
+                {
+                  name: `React.js`,
+                },
+                {
+                  name: `HTML/CSS`,
+                },
+                {
+                  name: `Nodejs`,
+                },
+              ],
+              awardAmount: 5,
+              awards: [
+                {
+                  name: `A lot of achievements`,
+                },
+                {
+                  name: `Diploma for creating a very important project`,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    footer,
+  })
 })
 // Підключаємо роутер до бек-енду
 module.exports = router
