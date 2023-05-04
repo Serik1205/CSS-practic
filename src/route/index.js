@@ -255,11 +255,11 @@ router.get("/education", function (req, res) {
           },
         ],
       },
-    }),
+    },
+
+
       footer,
 })
 })
-
-
 // Підключаємо роутер до бек-енду
 module.exports = router
