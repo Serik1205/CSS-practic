@@ -39,22 +39,48 @@
                                     <p><em>Exhibits</em></p>
                                     <div>
                                         {{#each exhibits}}
-                    <li>
-                        <b>{{name}}</b>
-                        <br />
-                        {{#if artist}}{{artist}}
-                        {{else}}
-                        {{/if}}
-                        {{description}}
-                        <br />
-                        {{#if audio_guide}}(audio guide){{/if}}
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
-            {{/with}}
-        </div>
-    </div>
 
-    {{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs Адже наш layout/default.hbs
-    має вже структуру HTML --}}
+
+                                        {{/each}}
+                                    </div>
+                                    {{/with}}
+                                </div>
+                            </div>
+                            {{/with}}
+                        </div>
+                    </li>
+                </ul>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    {{/with}}
+</div>
+<div>
+    {{#with details.venue}}
+    <div><strong>{{name}}</strong></div>
+    <div>
+        {{location.address}},
+        {{location.city}},
+        {{location.country}}
+    </div>
+    {{/with}}
+</div>
+<br />
+<div>
+    {{#each details.performens}}
+    <ul>
+        <li>{{name}} {{type}}</li>
+    </ul>
+    {{/each}}
+</div>
+<p>Guide:{{guide.name}}<br />
+    Language:{{guide.language}}<br />
+    Rating:{{guide.rating}}
+</p>
+</div>
+
+
+{{!-- Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs Адже наш layout/default.hbs
+має вже структуру HTML --}}
