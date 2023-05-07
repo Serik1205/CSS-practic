@@ -26,23 +26,44 @@
                         {{name}}
                         {{description }}
                     </li>
+            </div>
+            <br>
+
+            <div>
+                {{#each attributes}}
+                <ul>
+                    <li>
+                        {{name}}
+                        {{description}}
+                    </li>
                 </ul>
                 {{/each}}
             </div>
-            <br>
-            {{#if attributes}}:Attributes{{/if}}
+        </ul>
+        {{/each}}
+    </div>
+    <br>
+    <div>
+        {{#each properties}}
+        <ul>
+            <li>
+                {{name}}
+                {{description}}
+            </li>
             <div>
                 <ul>
-                    {{#each attributes}}
+                    {{each values}}
                     <li>
-                        {{name}}
+                        {{value}}
                         {{description}}
                     </li>
                     {{/each}}
                 </ul>
             </div>
             {{/each}}
+        </ul>
     </div>
+    {{/each}}
     </ul>
 </div>
 {{/with}}
