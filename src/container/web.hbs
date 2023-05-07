@@ -39,34 +39,71 @@
                 </ul>
                 {{/each}}
             </div>
-        </ul>
-        {{/each}}
-    </div>
-    <br>
-    <div>
-        {{#each properties}}
-        <ul>
-            <li>
+            <br>
+            <div>
+                {{#each properties}}
+                <ul>
+                    <li>
+                        {{name}}
+                        {{description}}
+                    </li>
+                    <div>
+                        <ul>
+                            {{each value}}
+                            <li>
+                                {{value}}
+                                {{description}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/each}}
+                </ul>
+            </div>
+            <div>
+                {{name}}{{version}}{{description}}
+            </div>
+            <br>
+            <div>
+                {{#each properties}}
+                <ul>
+                    <li>
+                        {{name}}
+                        {{description}}
+                    </li>
+                    <div>
+                        <ul>
+                            {{#each value}}
+                            <li>
+                                {{value}}
+                                {{description}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </ul>
+                {{/each}}
+            </div>
+            <hr>
+            <br>
+            <div>
                 {{name}}
                 {{description}}
-            </li>
+            </div>
             <div>
+                {{#each value}}
                 <ul>
-                    {{each values}}
                     <li>
                         {{value}}
                         {{description}}
                     </li>
-                    {{/each}}
                 </ul>
+                {{/each}}
             </div>
             {{/each}}
         </ul>
     </div>
-    {{/each}}
-    </ul>
-</div>
-{{/with}}
+    {{/with}}
 </div>
 
 {{!--
