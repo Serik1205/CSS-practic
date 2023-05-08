@@ -1,0 +1,105 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <h1>{{name}}</h1>
+    <div>
+        <hr>
+        <b>{{description}}</b1>
+    </div>
+    <div>
+        {{#with history}}
+        {{year}} {{founder}}
+        {{/with}}
+    </div>
+    <hr>
+    <br>
+    <div>
+        <h3>types:</h3>
+    </div>
+    <div>
+        {{#each types}}
+        <ul>
+            <li>{{this}}</li>
+        </ul>
+        {{/each}}
+    </div>
+    <br>
+    <div>
+        <h3>syntax:</h3>
+    </div>
+    <div>
+        {{#with syntax}}
+        {{#each variables}}
+        <ul>
+            <li>{{this}}</li>
+        </ul>
+        {{/each}}
+        {{#each functions }}
+        <ul>
+            <li>{{this}}</li>
+        </ul>
+        {{/each}}
+        {{#each conditionals }}
+        <ul>
+            <li>{{this}}</li>
+        </ul>
+        {{/each}}
+        {{#each loops }}
+        <ul>
+            <li>{{this}}</li>
+        </ul>
+        {{/each}}
+        {{#each classes}}
+        <ul>
+            <li>{{this}}</li>
+        </ul>
+        {{/each}}
+        {{/with}}
+        <br>
+        <div>
+            <h3>features:</h3>
+        </div>
+        <div>
+            {{#each features}}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+        </div>
+        <br>
+        <div>
+            <h3>tools:</h3>
+        </div>
+        <div>
+            {{#each tools }}
+            <ul>
+                <li>{{this}}</li>
+            </ul>
+            {{/each}}
+        </div>
+        <br>
+        <div>
+            <h3>community:</h3>
+        </div>
+        <div>
+            {{#each community}}
+            <ul>
+                <li>
+                    {{name}}
+                    {{type}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+
+    </div>
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
