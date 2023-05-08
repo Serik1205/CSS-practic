@@ -1,0 +1,72 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <h1> {{> title big=true data="Facebook "}}</h1>
+    <br>
+    <hr>
+    <hr>
+    <div>
+        <h3>User:{{#each users}}</h3>
+        <ul>
+            id:{{#if id}}{{/if}}
+            name:{{name}}
+            age:{{age}}
+        </ul>
+        <h3>friends:{{#each friends}}</h3>
+        <ul>
+            <li>
+                id:{{#if id }}{{/if}}
+                name:{{name}}
+                gender:{{gender}}
+                age:{{age}}
+            </li>
+        </ul>
+        <h3>mutual friends:{{#each mutual_friends}}</h3>
+        <ul>
+            <li>
+                id:{{#if id }}{{/if}}
+                name:{{name}}
+                gender:{{gender}}
+                age:{{age}}
+            </li>
+        </ul>
+        {{/each}}
+        {{/each}}
+        <br>
+        <h3>groups:{{#each groups}}</h3>
+        <ul>
+            <li>
+                id:{{#if id}}{{/if}}
+                name:{{name}}
+                description:{{description}}
+            </li>
+        </ul>
+        {{/each}}
+        <br>
+        <h3>members:{{#each members}}</h3>
+        <ul>
+            <li>
+                id:{{#if id}}{{/if}}
+                name:{{name}}
+                description:{{description}}
+            </li>
+        </ul>
+        {{/each}}
+
+        {{/each}}
+    </div>
+
+</div>
+
+
+
+
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
