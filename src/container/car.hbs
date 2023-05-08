@@ -1,0 +1,88 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <h1> {{> title big=true data="Toyota Camry "}}</h1>
+    <div>
+        <h2>year:{{year}}</h2>
+    </div>
+    <div>
+        <h2>color:{{color}}</h2>
+        <hr>
+        <hr>
+    </div>
+    <br>
+    <div>
+        {{#with features}}
+        <h3>Interior:{{#with interior}}</h3>
+        <br>
+        <b>Seats:{{#with seats}}</b>
+        <ul>
+            <li> material:{{material}}</li>
+            <li>color:{{color}}</li>
+            <li>heated:{{heated}}</li>
+            <li>ventilated:{{ventilated}}</li>
+            {{/with}}
+            <br>
+            <b>Dashboard:{{#with dashboard}}</b>
+            <ul>
+                <li>material:{{material}}</li>
+                <li>color:{{color}}</li>
+            </ul>
+            <b>display:{{#with display}}</b>
+            <ul>
+                <li>type:{{type}}</li>
+                <li>size:{{size}}</li>
+                <li>resolution:{{resolution}}</li>
+                <li>touchscreen:{{touchscreen}}</li>
+            </ul>
+            {{/with}}
+            {{/with}}
+            <br>
+            <b>audio:{{#with audio}}</b>
+            <ul>
+                <li>system:{{system}}</li>
+                <li>speakers:{{speakers}}</li>
+                <li>subwoofer:{{subwoofer}}</li>
+                <li>bluetooth:{{bluetooth}}</li>
+                <li>USB:{{USB}}</li>
+            </ul>
+            {{/with}}
+            {{/with}}
+            <br>
+            <div>
+                <h3>Exterior:{{#with exterior}}</h3>
+                <br>
+                <b>wheels:{{#with wheels}}</b>
+                <ul>
+                    <li>size:{{size}}</li>
+                    <li>type:{{type}}</li>
+                    <li>color:{{color}}</li>
+                </ul>
+                {{/with}}
+                <br>
+                <b>headlights:{{#with headlights}}</b>
+                <ul>
+                    <li>type:{{type}}</li>
+                    <li>rightness:{{rightness}}</li>
+                    <li>automatic:{{automatic}}</li>
+                </ul>
+                {{/with}}
+
+                {{/with}}
+            </div>
+
+            {{/with}}
+    </div>
+
+
+
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
