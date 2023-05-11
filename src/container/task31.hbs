@@ -1,0 +1,53 @@
+<main>
+    <div class="row 5">
+        <section class="col-7">
+            <div>
+                <div>
+                    {{#with navigation}}
+                    {{#each links}}
+                    <a href={{href}} class="btn-link m-3">{{text}}</a>
+                    {{/each}}
+                    {{#with button}}
+                    <a href={{href}} class="btn btn-primary">{{text}}</a>
+                    {{/with}}
+                    {{/with}}
+                </div>
+            </div>
+        </section>
+        <hr>
+        <br>
+        <section>
+            <header>{{#with header}}
+                <h1>{{title}}</h1>
+                <p class="text-secondary">{{description}}</p>
+                {{#with button}}
+                <button href={{href}} class="btn btn-info">{{text}}</button>
+                {{/with}}
+                {{/with}}
+            </header>
+        </section>
+        <section>
+            <header>
+                {{#with city}}
+                <h2>{{title}}</h2>
+                {{/with}}
+            </header>
+            <div>
+                {{#with card}}
+                <div class="card">
+                    <div>{{#with picture}}
+                        <img class="card-img-top" src={{src}} alt={{alt}}>
+                        {{/with}}
+                    </div>
+                    <div class="card-body">
+                        <p>{{title}}</p>
+                        <p class="text-secondary">{{description}}</p>
+
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+        </section>
+
+
+</main>
