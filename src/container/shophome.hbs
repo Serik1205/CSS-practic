@@ -1,0 +1,73 @@
+<main>
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="nav nav-tabs mb">
+                {{#with navigation }}
+                {{#each links}}
+                <div class="nav-item ">
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                </div>
+                {{/each}}
+                {{/with}}
+            </div>
+        </div>
+    </div>
+    <div>
+        {{#with newsBlock}}
+        <h2 class="text-center">{{title}}</h2>
+
+        <div class="row">
+            {{#each cards}}
+            <div class="col-3 g-8 m">
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        {{#if isTop}}
+                        <span class="badge text-bg-danger rounded-pill text-uppercase ms-1 my">Топ</span>
+                        {{/if}}
+                        {{#if isNew}}
+                        <span class="badge text-bg-success rounded-pill text-uppercase ms-1 my">Нове</span>
+                        {{/if}}
+                        <div class="cart-body">
+                            {{description}}
+                            {{isTop}}
+                            {{isNew}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+
+    <div class="nav nav-tabs mb">
+        {{#with goodsBlock}}
+        {{#each tabs}}
+        <div class="nav-item ">
+            <a class="nav-link {{#if isActive}}active{{/if}} {{#if isDisabled}}disabled{{/if}}">{{text}}</a>
+        </div>
+        {{/each}}
+        <div class=" row ">
+            {{#each cards}}
+            <div class="col-4 g-5">
+                <img class="card-img-top" src="{{image}}">
+                <div class="card-body">
+                    {{#if isHot}}
+                    <span class="badge text-bg-warning rounded-pill text-uppercase ms-1 my">Топ</span>
+                    {{/if}}
+                    {{#if isNew}}
+                    <span class="badge text-bg-primary rounded-pill text-uppercase ms-1 my">нове</span>
+                    {{/if}}
+                    <h4 class="card-title">{{title}}</h4>
+                    <div class="cart-body">
+                        {{description}}
+                        {{isHop}}
+                        {{isNew}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+</main>
