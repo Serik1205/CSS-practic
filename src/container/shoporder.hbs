@@ -1,0 +1,38 @@
+<main>
+    <div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="nav nav-tabs mb">
+                    {{#with navigation }}
+                    {{#each links}}
+                    <div class="nav-item ">
+                        <a href="{{#if href}}href{{/if}}" class="nav-link ">{{text}}</a>
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div>
+                <header>
+                    <h1>{{header}}</h1>
+                </header>
+                {{#with contacts_data}}
+                <h3>{{title}}</h3>
+                {{#each buttons}}
+                {{#if isOutline}}
+                <a class="btn btn-warning">
+                    {{text}}
+                </a>
+                {{/if}}
+                {{#if isPrimary}}
+                <a class="btn btn-outline-warning">{{text}}
+                </a>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</main>
