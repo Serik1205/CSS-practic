@@ -1,0 +1,81 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<main>
+    <div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="nav nav-tabs mb">
+                    {{#with navigation }}
+                    {{#each links}}
+                    <div class="nav-item ">
+                        <a href="{{#if href}}href{{/if}}" class="nav-link ">{{text}}</a>
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-12">
+            <div>
+                <header>
+                    <h1>{{header}}</h1>
+                </header>
+                {{#with contacts_data}}
+                <h3>{{title}}</h3>
+                {{#each buttons}}
+                {{#if isOutline}}
+                <a class="btn btn-warning">
+                    {{text}}
+                </a>
+                {{/if}}
+                {{#if isPrimary}}
+                <a class="btn btn-outline-warning">{{text}}
+                </a>
+                {{/if}}
+                {{/each}}
+                <div>
+                    {{#with form}}
+                    <div class="row col-12">
+                        {{#with input}}
+                        <div class="col-6 mt-3">
+                            <label class="form-label">{{surname.label}}</label>
+                            <input class="form-control" placeholder="{{surname.placeholder}}">
+                            <div class="form-text">{{surname.caption}}</div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label class="form-label">{{name.label}}</label>
+                            <input class="form-control" placeholder="{{name.placeholder}}">
+                            <div class="form-text">{{name.caption}}</div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label class="form-label">{{phone.label}}</label>
+                            <input class="form-control" placeholder="{{phone.placeholder}}">
+                            <div class="form-text">{{phone.caption}}</div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label class="form-label">{{email.label}}</label>
+                            <input class="form-control" placeholder="{{email.placeholder}}">
+                            <div class="form-text">{{email.caption}}</div>
+                        </div>
+                        <div class="col-12">
+                            {{#each switch}}
+                            <div class="form-label">{{text}}</div>
+                            <div class="form-check form-switch">
+                                <label class="form-check-label"></label>
+                                <input name="{{text}}" type="{{sActive}}" class="form-check-input">
+                            </div>
+                            {{/each}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
