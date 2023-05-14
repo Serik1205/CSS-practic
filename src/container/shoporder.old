@@ -68,9 +68,8 @@
                             <div class="form-check form-switch">
                                 <label class="form-check-label"></label>
                                 <input name="{{text}}" type="{{sActive}}" class="form-check-input">
-                                {{/each}}
                             </div>
-
+                            {{/each}}
                         </div>
                         {{/with}}
                     </div>
