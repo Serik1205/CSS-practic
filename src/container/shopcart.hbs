@@ -1,0 +1,59 @@
+<main>
+    <div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="nav nav-tabs mb">
+                    {{#with navigation }}
+                    {{#each links}}
+                    <div class="nav-item ">
+                        <a href="{{#if href}}href{{/if}}" class="nav-link ">{{text}}</a>
+                    </div>
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-7">
+            <div>
+                <header>
+                    {{#with header}}
+                    <h1>{{title}}</h1>
+                    {{#with button}}
+                    <div class="nav nav-tabs mt-3">
+                        <div class="nav-item ">
+                            <button {{link}} class="nav-link btn btn-outline-secondary ">{{text}}</button>
+                        </div>
+                    </div>
+                    {{/with}}
+                    {{/with}}
+                </header>
+            </div>
+            <div>
+                {{#each goodsBlock}}
+                <div class="card p-1 ">
+                    <div class="row ">
+
+                        <img class="card-img-top col-2" src={{image}}>
+
+                        <div class="col-6">
+                            <h3>{{name}}</h3>
+                            {{description}}
+                        </div>
+                        <div class="col-2">
+                            {{#with price}}
+
+                            {{title}}
+                            {{value}}
+                            {{/with}}
+                            <div class="col-2">{{amount}}</div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+
+</main>
