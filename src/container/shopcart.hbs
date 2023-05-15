@@ -30,30 +30,131 @@
                     {{/with}}
                 </header>
             </div>
-            <div>
-                {{#each goodsBlock}}
-                <div class="card p-1 ">
-                    <div class="row ">
+        </div>
+        <div>
+            {{#each goodsBlock}}
+            <div class="card p-2 mt-2">
+                <div class="row ">
 
-                        <img class="card-img-top col-2" src={{image}}>
+                    <img class=" col-2" src={{image}}>
 
-                        <div class="col-6">
-                            <h3>{{name}}</h3>
-                            {{description}}
+                    <div class="col-4">
+                        <h3>{{name}}</h3>
+                        {{description}}
+                    </div>
+                    <div class="col-2 ">
+                        {{#with price}}
+
+                        {{title}}
+                        <p>{{value}}</p>
+                        {{/with}}
+
+                    </div>
+                    <div class="col-1 ">{{amount}}</div>
+                    <div class="col-2">
+                        {{#each buttons}}
+                        <div class="row">
+
+                            <div>
+                                {{#if isPrimary}}
+                                <p class=" btn btn-primary ">{{text}}</p>
+                                {{/if}}
+                                {{#if isDanger }}
+                                <p class="btn btn-outline-danger  ">{{text}}</p>
+                                {{/if}}
+                            </div>
                         </div>
-                        <div class="col-2">
-                            {{#with price}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-4">
+                {{#with total}}
+                <h5>{{title}}</h5>
+                <p><b>{{amount}}</b></p>
+                {{delivery}}
+                {{#each buttons}}
+                <div>
+                    <div>
+                        {{#if isSuccess}}
+                        <a href="{{link}}" class="btn  btn-success m-3 btn-sm">{{text}}</a>
+                        {{/if}}
+                        {{#if isOutline }}
+                        <a href="{{link}}" class="btn btn-outline-success m-3 btn-sm">{{text}}</a>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+                {{/with}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
 
-                            {{title}}
-                            {{value}}
-                            {{/with}}
-                            <div class="col-2">{{amount}}</div>
+
+
+    <div>
+        {{#with goodsOtherBlock}}
+        <h3>{{title}}</h3>
+        <br>
+        <hr>
+        <div>
+
+            <div class="card  row ">
+                {{#each cards}}
+                <div class="col-5 g-3">
+                    <img src={{image}}>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h3>{{title}}
+                                {{#if isHot}}
+                                <span class="badge text-bg-warning rounded-pill  ms-5 ">Нot</span>
+                                {{/if}}
+                                {{#if idNew}}
+                                <span class="badge text-bg-success rounded-pill  ms-5 ">Нове</span>
+                                {{/if}}
+                            </h3>
+                            {{description}}
                         </div>
                     </div>
                 </div>
                 {{/each}}
             </div>
         </div>
+        {{/with}}
+    </div>
+    <div class="m-1">
+        {{#with subscribe}}
+        <div class="card row text-bg-dark ">
+            <div class="col-8">
+                <div class="card-body">
+                    <h2>{{header}}</h2>
+                    {{description}}
+                    {{#each buttons}}
+                    <a href="{{link}}" class="btn  btn-primary btn-sm p">{{text}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </div>
+    <Footer class="m-1 row">
+        <div class="col-8 m-3">
+            {{#each footer}}
+            {{#each this}}
+            <a href="{{link}}">{{this.text}}</a>
+
+            {{/each}}
+            {{/each}}
+        </div>
+    </Footer>
+
+
 
 
 </main>
