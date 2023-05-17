@@ -6,7 +6,7 @@
                     {{#with navigation }}
                     {{#each links}}
                     <div class="nav-item ">
-                        <a href="{{#if href}}href{{/if}}" class="nav-link ">{{text}}</a>
+                        <a href="{{#if href}}href{{/if}}" class="nav-link {{#if @last}}disabled{{/if}} ">{{text}}</a>
                     </div>
                     {{/each}}
                     {{/with}}
@@ -144,17 +144,15 @@
         {{/with}}
     </div>
     <Footer class="m-1 row">
-        <div class="col-8 m-3">
+        <div class="col-8 m-3 ">
             {{#each footer}}
             {{#each this}}
-            <a href="{{link}}">{{this.text}}</a>
 
+            <a class="{{#if @last}}disabled{{/if}}" href="{{link}}">
+                {{this.text}}
+            </a>
             {{/each}}
             {{/each}}
         </div>
     </Footer>
-
-
-
-
 </main>
