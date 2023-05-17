@@ -100,7 +100,7 @@
         {{/with}}
     </div>
     <div class="row">
-        <div class="col-8">
+        <div class="col-12">
             {{#each reviewList}}
             {{#with title}}
             <p>
@@ -142,25 +142,48 @@
                     {{text}}
                     {{/with}}
                 </div>
-                <div class="card ">
+                <div class="gx-2 ">
                     {{#each images}}
                     <img src="{{this}}" alt="photos">
                     {{/each}}
                 </div>
+
                 {{/with}}
             </div>
             <div>
                 {{#each coments}}
-                {{#with coments}}
                 <h6>{{userName}}</h6>
                 <p>{{date}}</p>
                 {{text}}
-                {{/with}}
                 {{/each}}
             </div>
             {{/each}}
         </div>
+        <div class="card text-bg-success mt-3">
+            {{#with service}}
+            <div class="card-title">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="card-body">
+                {{description}}
+                {{#each buttons}}
+                <a href="{{link}}" class="btn btn-primary mt-2 ">{{text}}</a>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
     </div>
+    <Footer class="m-1 row">
+        <div class="col-8 m-3 ">
+            {{#each footer}}
+            {{#each this}}
+            <a class="{{#if @last}}disabled{{/if}}" href="{{link}}">
+                {{this.text}}
+            </a>
+            {{/each}}
+            {{/each}}
+        </div>
+    </Footer>
 
 
 </main>

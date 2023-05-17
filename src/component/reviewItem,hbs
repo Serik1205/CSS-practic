@@ -1,0 +1,52 @@
+<div class="row">
+        <div class="col-12">
+            {{#each reviewList}}
+            {{#with title}}
+            <p>
+            <h6>{{userName}}</h6>
+            </p>
+            <p>
+                {{caption}}
+            </p>
+            <p>
+                {{date}}
+            </p>
+            {{/with}}
+            <div>
+                {{#with reviewBody}}
+                {{#with seller}}
+                {{title}}:
+                {{value}}
+                {{/with}}
+                <div>
+                    {{#with rating}}
+                    {{title}}:
+                    {{value}}
+                    {{/with}}
+                </div>
+                <div>
+                    {{#each text}}
+                    {{this}}
+                    {{/each}}
+                </div>
+                <div>
+                    {{#with advantages}}
+                    <h6>{{title}}</h6>
+                    {{text}}
+                    {{/with}}
+                </div>
+                <div>
+                    {{#with disadvantages}}
+                    <h6>{{title}}</h6>
+                    {{text}}
+                    {{/with}}
+                </div>
+                <div class="gx-2 ">
+                    {{#each images}}
+                    <img src="{{this}}" alt="photos">
+                    {{/each}}
+                </div>
+
+                {{/with}}
+            </div>
+            <div>
