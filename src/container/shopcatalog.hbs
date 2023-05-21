@@ -96,38 +96,49 @@
     <div class="row">
         <div class="col-12">
             {{#each goodsList }}
-            <div class=" card col-4 g-5">
-                <div class="card-body">
-                    {{#if isHot}}
-                    <span class="badge text-bg-warning rounded-pill text-uppercase ms-1 my">Hot</span>
-                    {{/if}}
-                    {{#if isNew}}
-                    <span class="badge text-bg-primary rounded-pill text-uppercase ms-1 my">New</span>
-                    {{/if}}
-                    {{#if isFast}}
-                    <span class="badge text-bg-success rounded-pill text-uppercase ms-1 my">Fast</span>
-                    {{/if}}
-                    {{#if isFree}}
-                    <span class="badge text-bg-danger rounded-pill text-uppercase ms-1 my">Free</span>
-                    {{/if}}
-                    <img src={{img}}>
-                    <h6>
-                        <p>{{name}}</p>
-                    </h6>
-                    {{#with review}}
-                    {{amount}} {{text}}
-                    {{/with}}
-                    <h6>{{price}}</h6>
-                    {{delivery}}
-                    <div>
-                        {{#each buttons}}
-                        {{#if isPrimary}}
-                        <a href="{{link}}" class="btn btn-primary me-2 mt-2">{{text}}</a>
-                        {{/if}}
-                        {{#if isSecondary}}
-                        <a href="{{link}}" class="btn btn-secondary me-2 mt-2">{{text}}</a>
-                        {{/if}}
-                        {{/each}}
+            <div class=" card col-4 mt-4">
+                <div class="col-8">
+                    <div class="row">
+                        <img src={{img}}>
+                        <div class="card col-6 g-5">
+                            {{#if isHot}}
+                            <span class="badge text-bg-warning rounded-pill text-uppercase ms-1 my">Hot</span>
+                            {{/if}}
+                        </div>
+                        <div class="card col-6 g-5">
+                            {{#if isNew}}
+                            <span class="badge text-bg-primary rounded-pill text-uppercase ms-1 my">New</span>
+                            {{/if}}
+                        </div>
+                        <div class="card col-6 g-5">
+                            {{#if isFast}}
+                            <span class="badge text-bg-success rounded-pill text-uppercase ms-1 my">Fast</span>
+                            {{/if}}
+                        </div>
+                        <div class="card col-6 g-5">
+                            {{#if isFree}}
+                            <span class="badge text-bg-danger rounded-pill text-uppercase ms-1 my">Free</span>
+                            {{/if}}
+                        </div>
+                        <h6>
+                            <p>{{name}}</p>
+                        </h6>
+                        {{#with review}}
+                        {{amount}} {{text}}
+                        {{/with}}
+                        <h6>{{price}}</h6>
+                        {{delivery}}
+                        <div>
+                            {{#each buttons}}
+                            {{#if isPrimary}}
+                            <a href="{{link}}" class="btn btn-primary me-2 mt-2">{{text}}</a>
+                            {{/if}}
+                            {{#if isSecondary}}
+                            <a href="{{link}}" class="btn btn-secondary me-2 mt-2">{{text}}</a>
+                            {{/if}}
+                            {{/each}}
+                        </div>
+
                     </div>
                 </div>
             </div>
