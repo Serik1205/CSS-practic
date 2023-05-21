@@ -1,11 +1,11 @@
  /*:root {
   background:purple ;
- }
+ }*/
 html {
-  max-width: 720px;
+  max-width: 1000px;
   background: blue;
 }
-body {
+/*body {
   margin: 32px;
   background: white;
 }
