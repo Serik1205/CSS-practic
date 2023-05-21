@@ -1,10 +1,37 @@
+ /*:root {
+  background:purple ;
+ }
 html {
   max-width: 720px;
+  background: blue;
 }
-
 body {
   margin: 32px;
-  background: #fff;
+  background: white;
+}
+* {
+  color:red;
+}
+h1 {
+  color:aqua
+}
+.box {
+  background: #afaeae;
+}
+#user {
+  color:blue;
+}
+h1,h2,button {
+  color:green;
+}
+.button {
+  background:red ;
+}
+div> p {
+color:coral;
+}
+h1 ~ * >p {
+  background: black;
 }
 
 main,
@@ -16,4 +43,68 @@ nav {
 
 section {
   padding: 16px;
+}  */
+/*.card-dark {
+  background: #868585;
+}
+.item{
+  color:green;
+}
+.item:last-of-type {
+  color:blue
+}
+.item:only-of-type {
+  color:crimson;
+}
+.item:nth-of-type(2n) {
+  color:navy;
+}
+div:not() {
+  color:blueviolet;
+}
+p:empty {
+  height: 10 px;
+  background: red;
+}
+
+.input-dark {
+  background: hsl(54, 64%, 46%);
+}
+
+.input-dark[required] {
+  background: #810808;
+}
+.input-dark[type ="number"] {
+  background: #048b3c;
+}
+.small-img [alt~="small"] {
+  height: 500px;
+}
+a[rel~="external"] {
+  color:green
+}
+button[class|="btn"] {
+  background: red;
+}
+
+a[class*="btn"] {
+  background: rgb(94, 255, 0);
+}
+
+a[class$="big"] {
+  background: rgb(0, 38, 255);
+}
+.btn::first-letter {
+  color:rgb(154, 240, 15);
+}
+.big-text::first-line {
+  color: gold;
+}
+.input-dark::placeholder {
+  color: #810808;
+  background: #048b3c;
+}
+.big-text::before ,.big-text::after {
+  content: "###";
+  color: red;
 }
