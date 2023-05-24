@@ -114,45 +114,39 @@
                             <span class="badge text-bg-success rounded-pill text-uppercase ms-1 my">Fast</span>
                             {{/if}}
                         </div>
-                        <div class="col-6 g-5">
-                            {{#if isFree}}
-                            <span class="badge text-bg-danger rounded-pill text-uppercase ms-1 my">Free</span>
-                            {{/if}}
-                        </div>
-                        <h6>
-                            <p>{{name}}</p>
-                        </h6>
-                        {{#with review}}
-                        {{amount}} {{text}}
-                        {{/with}}
-                        <h6>{{price}}</h6>
-                        {{delivery}}
-                        <div>
-                            {{#each buttons}}
-                            {{#if isPrimary}}
-                            <a href="{{link}}" class="btn btn-primary me-2 mt-2">{{text}}</a>
-                            {{/if}}
-                            {{#if isSecondary}}
-                            <a href="{{link}}" class="btn btn-secondary me-2 mt-2">{{text}}</a>
-                            {{/if}}
-                            {{/each}}
-                        </div>
 
+                        {{>catalogItem}}
                     </div>
                 </div>
-            </div>
-            <div class="mt-3">
-                {{#each characteristics}}
-                <ul>
-                    <li>{{title}} {{value}}</li>
-
-                </ul>
                 {{/each}}
             </div>
-            {{/each}}
+
         </div>
     </div>
-
+    <div class="card text-bg-success mt-3 m-5">
+        {{#with service}}
+        <div class="card-title">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="card-body">
+            {{description}}
+            {{#each buttons}}
+            <a href="{{link}}" class="btn btn-primary mt-2 ">{{text}}</a>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+    <Footer class="m-1 row">
+        <div class="col-8 m-3 ">
+            {{#each footer}}
+            {{#each this}}
+            <a class="{{#if @last}}disabled{{/if}}" href="{{link}}">
+                {{this.text}}
+            </a>
+            {{/each}}
+            {{/each}}
+        </div>
+    </Footer>
 
 
 

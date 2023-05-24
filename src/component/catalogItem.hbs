@@ -1,0 +1,30 @@
+<div class="col-6 g-5">
+    {{#if isFree}}
+    <span class="badge text-bg-danger rounded-pill text-uppercase ms-1 my">Free</span>
+    {{/if}}
+</div>
+<h6>
+    <p>{{name}}</p>
+</h6>
+{{#with review}}
+{{amount}} {{text}}
+{{/with}}
+<h6>{{price}}</h6>
+{{delivery}}
+<div>
+    {{#each buttons}}
+    {{#if isPrimary}}
+    <a href="{{link}}" class="btn btn-primary me-2 mt-2">{{text}}</a>
+    {{/if}}
+    {{#if isSecondary}}
+    <a href="{{link}}" class="btn btn-secondary me-2 mt-2">{{text}}</a>
+    {{/if}}
+    {{/each}}
+</div>
+<div class="mt-3">
+    {{#each characteristics}}
+    <ul>
+        <li>{{title}} {{value}}</li>
+    </ul>
+    {{/each}}
+</div>

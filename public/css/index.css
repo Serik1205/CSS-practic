@@ -29,10 +29,6 @@ h1,h2,button {
 }
 div> p {
 color:coral;
-}
-h1 ~ * >p {
-  background: black;
-}
 
 main,
 header,
