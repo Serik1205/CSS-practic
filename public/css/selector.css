@@ -1,0 +1,177 @@
+ /*:root {
+  background:purple ;
+ }*/
+html {
+  max-width: 1000px;
+  background: white;
+}
+/*body {
+  margin: 32px;
+  background: white;
+}
+* {
+  color:red;
+}
+h1 {
+  color:aqua
+}
+.box {
+  background: #afaeae;
+}
+#user {
+  color:blue;
+}
+h1,h2,button {
+  color:green;
+}
+.button {
+  background:red ;
+}
+div> p {
+color:coral;
+
+main,
+header,
+footer,
+nav {
+  margin: 32px;
+}
+
+section {
+  padding: 16px;
+}  */
+/*.card-dark {
+  background: #868585;
+}
+.item{
+  color:green;
+}
+.item:last-of-type {
+  color:blue
+}
+.item:only-of-type {
+  color:crimson;
+}
+.item:nth-of-type(2n) {
+  color:navy;
+}
+div:not() {
+  color:blueviolet;
+}
+p:empty {
+  height: 10 px;
+  background: red;
+}
+
+.input-dark {
+  background: hsl(54, 64%, 46%);
+}
+
+.input-dark[required] {
+  background: #810808;
+}
+.input-dark[type ="number"] {
+  background: #048b3c;
+}
+.small-img [alt~="small"] {
+  height: 500px;
+}
+a[rel~="external"] {
+  color:green
+}
+button[class|="btn"] {
+  background: red;
+}
+
+a[class*="btn"] {
+  background: rgb(94, 255, 0);
+}
+
+a[class$="big"] {
+  background: rgb(0, 38, 255);
+}
+.btn::first-letter {
+  color:rgb(154, 240, 15);
+}
+.big-text::first-line {
+  color: gold;
+}
+.input-dark::placeholder {
+  color: #810808;
+  background: #048b3c;
+}
+.big-text::before ,.big-text::after {
+  content: "###";
+  color: red; 
+} */
+#test:target {
+  color: red;
+}
+.link:link {
+  color: red;
+}
+.link:hover {
+  color:green;
+}
+
+.link:active {
+  color: purple;
+}
+.card:active {
+  background: purple;
+}
+input {
+  background: gray;
+}
+input:focus {
+  background: red;
+}
+.card:focus-within {
+  background: red;
+}
+.card:lang(en)>span::after {
+  color: aqua;
+  content: "(en)";
+}
+button {
+  background: greenyellow;
+}
+button:enabled {
+  background: green;
+}
+button:disabled {
+  background: aqua;
+}
+.inp:read-write {
+  background: blue;
+}
+
+.inp:read-only {
+  background:red;
+}
+input [type ="checkbox"] :checked ~span {
+  background:red ;
+}
+.valid:valid {
+  background: yellow;
+}
+
+.valid:invalid {
+  background: burlywood;
+}
+.valid:optional {
+  background: rgb(15, 221, 170);
+}
+
+.number:focus {
+  background: gray;
+}
+.number:out-of-range {
+  background: red;
+}
+.number:in-range {
+  background: green;
+}
+input:placeholder-shown ~ span {
+  background: purple;
+}

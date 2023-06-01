@@ -1,106 +1,75 @@
  /*:root {
   background:purple ;
  }*/
-html {
+/*html {
   max-width: 1000px;
-  background: blue;
-}
-/*body {
-  margin: 32px;
   background: white;
+}*/
+  .card {
+    color:red ;
+  }
+
+.card > p {
+  color:green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
+  
+}
+p:hover {
+  -webkit-text-fill-color: rgb(217, 255, 0);
+  -webkit-text-stroke: 3px rgb(255, 8, 0);
+  direction: rtl;
+}
+#test {
+  color:inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke:inherit;
+  text-align: justify;
+  letter-spacing: 0.02em;
+  
+}
+span {
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: underline solid red;
+}
+span:hover {
+	text-decoration-line: line-through;
+	text-transform: uppercase;
+	text-decoration-style: wavy;
+  }
+pre {
+	tab-size:10;
 }
 * {
-  color:red;
+	font-family: "Roboto" ,Arial, Helvetica, sans-serif sans-serif;
+	font-size: 18px;
+	font-weight: 900;
+	font-display:swap;
 }
-h1 {
-  color:aqua
+span {
+	font-size: larger;
+	font-weight: 900;
+	font-weight:lighter;
+	font-style: oblique;
+	text-emphasis-position: over left;writing-mode: vertical-rl;
 }
-.box {
-  background: #afaeae;
+p {
+	font-variant-caps:unicase ;
+color:color-mix(#111,#1555) ;
 }
-#user {
-  color:blue;
+button {
+	accent-color: red;
 }
-h1,h2,button {
-  color:green;
+.test {
+	display: none;
 }
-.button {
-  background:red ;
-}
-div> p {
-color:coral;
-
-main,
-header,
-footer,
-nav {
-  margin: 32px;
-}
-
-section {
-  padding: 16px;
-}  */
-/*.card-dark {
-  background: #868585;
-}
-.item{
-  color:green;
-}
-.item:last-of-type {
-  color:blue
-}
-.item:only-of-type {
-  color:crimson;
-}
-.item:nth-of-type(2n) {
-  color:navy;
-}
-div:not() {
-  color:blueviolet;
-}
-p:empty {
-  height: 10 px;
-  background: red;
-}
-
-.input-dark {
-  background: hsl(54, 64%, 46%);
-}
-
-.input-dark[required] {
-  background: #810808;
-}
-.input-dark[type ="number"] {
-  background: #048b3c;
-}
-.small-img [alt~="small"] {
-  height: 500px;
-}
-a[rel~="external"] {
-  color:green
-}
-button[class|="btn"] {
-  background: red;
-}
-
-a[class*="btn"] {
-  background: rgb(94, 255, 0);
-}
-
-a[class$="big"] {
-  background: rgb(0, 38, 255);
-}
-.btn::first-letter {
-  color:rgb(154, 240, 15);
-}
-.big-text::first-line {
-  color: gold;
-}
-.input-dark::placeholder {
-  color: #810808;
-  background: #048b3c;
-}
-.big-text::before ,.big-text::after {
-  content: "###";
-  color: red;
+.block {
+	display: block;
+	background: rgb(192, 192, 192);
+	margin:auto;
+	max-width:min-content ;
+	min-width: 10px;
+	min-height:100px;
+	max-height: 200px;
 }
