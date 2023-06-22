@@ -38,17 +38,19 @@
 </main>
 {{#with updates}}
 <div class="updates">
+	{{#each list}}
 	<div class="updates_list">
-		<h2>{{title}}<h2>
-				<div class="updates_img"></div>
-				{{#each list}}
-				<strong>{{nickname}}</strong>
-				<p>{{description}}</p>
-				{{/each}}
-				{{#with show_all}}
-				<a href="{{url}}">{{text}}</a>
-				{{/with}}
+		<div class="updates_img">64*64</div>
+		<div class="upd_text">
+			<strong>{{nickname}}</strong>
+			<p>{{description}}</p>
+		</div>
+		{{#with show_all}}
+		<a href="{{url}}">{{text}}</a>
+		{{/with}}
 	</div>
+</div>
+{{/each}}
 </div>
 {{/with}}
 
