@@ -49,11 +49,25 @@
 		<a href="{{url}}">{{text}}</a>
 		{{/with}}
 	</div>
-</div>
-{{/each}}
+	{{/each}}
 </div>
 {{/with}}
+<div class="expirience_title">
+	<h1>{{title}}</h1>
+</div>
+<div class="expirience">
+	{{#with expirience}}
+	{{#each list}}
+	<div class="expirience_content">
+		<div class="expirience_text">
+			<strong>{{name}}</strong>
+			<p>{{details}}</p>
+		</div>
+	</div>
 
+	{{/each}}
+	{{/with}}
+</div>
 <footer class=" footer " id=" test">
 	<div>
 		{{>logo}}
