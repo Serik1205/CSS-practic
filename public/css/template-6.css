@@ -247,18 +247,15 @@ padding: var(--space-m);
 	cursor: pointer;
  }
  .expirience {
+	/* display: flex;
+		flex-direction: row; */
+	   gap: var(--space-l);
+	   border: 1px solid #E4EAF2;
+	   padding: var(--space-l);
+	}
+	.exp_content{
 	display: flex;
-     flex-direction: row;
-    gap: var(--space-l);
-    border: 1px solid #E4EAF2;
-    padding: var(--space-l);
- }
- .expirience_title {
-	text-align: left;
-	font-size: var(--size-b);
-	font-weight: var(--weight-title);
-	color: var(--color-title)
- }
+	}
  .expirience_content {
 	display: flex;
 	flex-direction: column;

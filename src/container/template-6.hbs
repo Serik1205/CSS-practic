@@ -52,21 +52,19 @@
 	{{/each}}
 </div>
 {{/with}}
-<div class="expirience_title">
-	<h1>{{title}}</h1>
-</div>
+{{#with expirience}}
 <div class="expirience">
-	{{#with expirience}}
-	{{#each list}}
-	<div class="expirience_content">
-		<div class="expirience_text">
-			<strong>{{name}}</strong>
-			<p>{{details}}</p>
+	<h1 class="expirience_title">{{title}}</h1>
+	<div class="exp_content">
+		{{#each list}}
+		<div class="expirience_content">
+			<div class="expirience_text">
+				<strong>{{name}}</strong>
+				<p>{{details}}</p>
+			</div>
 		</div>
+		{{/each}}
 	</div>
-
-	{{/each}}
-	{{/with}}
 </div>
 <footer class=" footer " id=" test">
 	<div>
@@ -79,5 +77,4 @@
 		{{>nav1 list=links isVertical=true }}
 	</div>
 	{{/each}}
-
 </footer>
