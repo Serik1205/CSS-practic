@@ -160,9 +160,32 @@ padding: var(--space-m);
     border-bottom: 1px solid var(--color-border);
  }
  .updates_img {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     background:#007BFF;
+	
+ }
+ .updates_list:nth-of-type(2) .updates_img {
+	background: #6F42C1 ;
+ }
+ .updates_list:nth-of-type(3) .updates_img {
+	background: #491414 ;
+ }
+ .exp_badge {
+	width: 100px;
+    height: 50px;
+	text-align: center;
+	border-radius: 30px;
+	background-color: #FF7347;
+	color: var(--color-white);
+	padding:var(--space-s);
+	position: absolute;
+	left: 1200px;
+	top: 1075px;
+	transform: rotate(45deg);
+ }
+ .updates_link {
+	color: var(--color-primary);
  }
  
  .form {
@@ -247,25 +270,26 @@ padding: var(--space-m);
 	cursor: pointer;
  }
  .expirience {
-	/* display: flex;
-		flex-direction: row; */
 	   gap: var(--space-l);
 	   border: 1px solid #E4EAF2;
 	   padding: var(--space-l);
 	}
+	.expirience_title {
+		font-weight: var(--weight-title);
+		color: var(--color-title);
+	}
 	.exp_content{
 	display: flex;
-	}
+ }
  .expirience_content {
-	display: flex;
-	flex-direction: column;
 	text-align: left;
 	font-size: var(--size-d);
 	font-weight: var(--weight-text);
 	color: var(--color-white);
 	background: #212529;
 	border-radius: var(--border-radius-d);
-	height: 100%;
-	padding: var(--space-s);
-	width: 70%;
+	height: 180px;
+	padding: var(--space-l);
+	width: 100%;
+	margin: 24px;
  }
