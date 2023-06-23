@@ -1,0 +1,33 @@
+<header class="header">
+	{{#with header}}
+	<div class="nav">
+		<div class="nav_logo ">
+			<span class="badge text-bg-primary ">Logo</span>
+		</div>
+		<div class="nav_link">
+			{{#each links}}
+			<a href="{{url}}" class="nav_item">{{text}}</a>
+			{{/each}}
+		</div>
+	</div>
+	<div class="user">
+		<div class="user_us">user online :{{userOnline}}</div>
+		{{#with ad}}
+		<div class="user_ad">
+			<span class="badge">Ad</span>
+			{{text}} :
+			<a>{{url}}</a>
+		</div>
+		{{/with}}
+	</div>
+	{{/with}}
+
+
+</header>
+<main class="main">
+
+</main>
+
+<footer class=" footer " id=" test">
+
+</footer>
