@@ -1,0 +1,11 @@
+<footer class=" footer ">
+	{{#with footer }}
+	<div class="footer_copyright">{{copyright}}</div>
+	{{#each pages}}
+	<div class="footer_page">
+		{{patch}}
+		{{name}}
+	</div>
+	{{/each}}
+	{{/with}}
+</footer>

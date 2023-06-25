@@ -1,4 +1,4 @@
-<div>
+
 <div>
 {{#each goodsBlock}}
             <div class="card p-2 mt-2">

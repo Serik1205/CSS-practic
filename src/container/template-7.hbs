@@ -1,33 +1,47 @@
-<header class="header">
-	{{#with header}}
-	<div class="nav">
-		<div class="nav_logo ">
-			<span class="badge text-bg-primary ">Logo</span>
+{{>headerDark}}
+<main class="main">
+	{{header}}
+	<section class="page_block ">
+		<div class="hero">
+			{{#with hero}}
+			{{>hero title=title text=description}}
+			<a class="button" href="{{button.url}}">{{button.text}}</a>
+			{{/with}}
 		</div>
-		<div class="nav_link">
-			{{#each links}}
-			<a href="{{url}}" class="nav_item">{{text}}</a>
-			{{/each}}
-		</div>
+	</section>
+</main>
+<div class="card">
+	{{#with about }}
+	<div class="card_title">
+		<h1>{{heading}}</h1>
 	</div>
-	<div class="user">
-		<div class="user_us">user online :{{userOnline}}</div>
-		{{#with ad}}
-		<div class="user_ad">
-			<span class="badge">Ad</span>
-			{{text}} :
-			<a>{{url}}</a>
-		</div>
-		{{/with}}
+	<div class="card_text">
+		{{info}}
 	</div>
 	{{/with}}
-
-
-</header>
-<main class="main">
-
-</main>
-
-<footer class=" footer " id=" test">
-
-</footer>
+</div>
+<div class="info">
+	<div class="info_title">
+		<h1>Our Articles</h1>
+	</div>
+	<div class="info_logo ">
+		<span class="info_badge ">View All</span>
+	</div>
+</div>
+{{#each articles}}
+<div class="article">
+	<div class="article_photo">
+		<img src="{{photo}}" alt="#">
+	</div>
+	<div class="article_name">
+		<h2>{{name}}</h2>
+	</div>
+	<div class="article_description">
+		<p>{{description}}</p>
+	</div>
+</div>
+{{/each}}
+<button type="submit" class="article_button">Read All</button>
+<button type="submit" class="article_button">Read All</button>
+<button type="submit" class="article_button">Read All</button>
+{{>footerDark}}
