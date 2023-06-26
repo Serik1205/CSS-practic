@@ -1,6 +1,5 @@
 {{>headerDark}}
 <main class="main">
-	{{header}}
 	<section class="page_block ">
 		<div class="hero">
 			{{#with hero}}
@@ -28,21 +27,5 @@
 		<span class="info_badge ">View All</span>
 	</div>
 </div>
-<div class="article">
-	{{#each articles}}
-	<div class="article_card">
-		<div class="article_photo">
-			<img src="{{photo}}" alt="#">
-		</div>
-		<div class="article_name">
-			<h2>{{name}}</h2>
-		</div>
-		<div class="article_description">
-			<p>{{description}}</p>
-		</div>
-		<button type="submit" class="article_button">Read All</button>
-	</div>
-	{{/each}}
-
-</div>
+{{>articleCardDark}}
 {{>footerDark}}
