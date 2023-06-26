@@ -145,6 +145,7 @@ gap: 10px;
  .page_block {
 	width: 1150px;
 	border-radius: var(--border-radius-d);
+	padding: 32px;
 	
  }
  .hero_title {
@@ -250,13 +251,21 @@ align-self: stretch;
  }
  .article {
 	display: flex;
+	gap: 32px;
+ }
+ .article_card {
+	display: flex;
     align-items: flex-start;
     gap: 32px;
     align-self: stretch;
+	flex-direction: column;
+	width: 100%;
  }
  .article_photo {
 	width: 400.949px;
 	height: 248.128px;
+	flex-direction: column;
+	width: 100%;
 	
  }
  .article_name {
