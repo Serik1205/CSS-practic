@@ -1,0 +1,18 @@
+:root {
+	--space-m :12px;
+	--space-xm:16px;
+	--space-l :24px;
+	--space-b :36px;
+	--size-s :14px;
+	--size-d :16px;
+	--size-l :20px;
+	--color-border:  #DEE2E6;
+	--color-primary: rgb(6, 6, 248);
+	--color-white: #ffff ;
+	--color-title: #212529;
+	--color-text:#343A40;
+	--border-radius: 12px;
+	--weight-title: 500;
+	--weight-text: 400;
+	--page-width: 960px;
+}
