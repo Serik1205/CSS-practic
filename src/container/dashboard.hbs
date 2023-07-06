@@ -21,8 +21,8 @@
 
 <body>
 	<div class="page page--dashboard">
-		<aside class="page__aside aside vertical">
-			<div class="aside__logo">
+		<aside class="page__aside aside vertical vertical--big">
+			<div class="text aside__logo">
 				Sidebar
 			</div>
 			<nav class="vertical vertical--small">
@@ -38,19 +38,88 @@
 					<span class="icon nav-buttom__icon" style="background-image: url('/svg/nav/products.svg');"></span>
 					<span class="text text--light">Products</span>
 				</a>
+				<div class="relative click">
+					<div class="field field--select ">
+						<span class="text text--light">Choose...</span>
+						<select class="field__select">
+							<option value="dog">Dog</option>
+						</select>
+					</div>
+				</div>
 			</nav>
 		</aside>
 		<header class="header">
 			<div class="layout header__content text--small">
-				<div class="header__search">
-					<input type="text" placeholder="Search" class="field field--header">
+				<div class="header__search relative ">
+					<input type="text" placeholder="Search" class="text field field--header">
 					<span class="icon header__icon-search"
 						style="background-image: url('/svg/header/search.svg');"></span>
 					<span class="icon icon--header-setting icon--button icon--color-blue click"
 						style="background-image: url('/svg/header/setting.svg');"></span>
 				</div>
+				<div class="header__img relative ">
+					<span class="icon icon__header-signal icon--button icon--color-yelow click"
+						style="background-image: url('/svg/header/signal.svg');"></span>
+					<span class="icon icon__header-signal icon--button icon--color-primary click"
+						style="background-image: url('/svg/header/translate.svg');"></span>
+					<span class="icon icon__header-signal icon--button icon--color-yelow click"
+						style="background-image: url('/svg/header/bell.svg');"></span>
+				</div>
+			</div>
 		</header>
-		<main class="main">Test</main>
+		<main class="main">
+			<div class="layout">
+				<section class="box analytic__block">
+					<div class="analytic analytic--double analytic--blue ">
+						<span class="icon analytic__button icon--button icon--color-blue click"
+							style="background-image: url('/svg/analytic/order.svg');"></span>
+						<div class="relative vertical vertical--small">
+							<div class="text text--light analytic__title">$961</div>
+							<div class="text text--small text--lighter ">Total Order</div>
+							<span class="icon analytic__arrow"
+								style="background-image: url('/svg/analytic/blue-arrow.svg');"></span>
+						</div>
+					</div>
+					<div class="analytic analytic--double analytic--purple">
+						<span class="icon analytic__button icon--button icon--color-purple click"
+							style="background-image: url('/svg/analytic/earning.svg');"></span>
+						<div class="relative vertical vertical--small">
+							<div class="text text--light analytic__title">$500.00</div>
+							<div class="text text--small text--lighter ">Total earning</div>
+						</div>
+					</div>
+					<div class="analytic analytic--double analytic__income">
+						<div class="analytic analytic--double analytic--blue ">
+							<span class="icon analytic__button icon--button icon--color-purple click"
+								style="background-image: url('/svg/analytic/earning.svg');"></span>
+							<div class="relative vertical vertical--small">
+								<div class="text text--light analytic__title">$500.00</div>
+								<div class="text text--small text--lighter ">Total earning</div>
+							</div>
+						</div>
+						<div class="analytic  analytic--blue ">
+							<span class="icon analytic__button icon--button icon--color-purple click"
+								style="background-image: url('/svg/analytic/earning.svg');"></span>
+							<div class="relative vertical vertical--small">
+								<div class="text text--light analytic__title">$500.00</div>
+								<div class="text text--small text--lighter ">Total earning</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="analytic">
+						<div>Test</div>
+						<div>Test</div>
+						<div>Test</div>
+					</div>
+					<div class="analytic">
+						<div>Test</div>
+						<div>Test</div>
+						<div>Test</div>
+					</div>
+				</section>
+			</div>
+		</main>
 	</div>
 
 
