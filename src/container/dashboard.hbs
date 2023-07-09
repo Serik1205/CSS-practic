@@ -38,14 +38,7 @@
 					<span class="icon nav-buttom__icon" style="background-image: url('/svg/nav/products.svg');"></span>
 					<span class="text text--light">Products</span>
 				</a>
-				<div class="relative click">
-					<div class="field field--select ">
-						<span class="text text--light">Choose...</span>
-						<select class="field__select">
-							<option value="dog">Dog</option>
-						</select>
-					</div>
-				</div>
+
 			</nav>
 		</aside>
 		<header class="header">
@@ -108,27 +101,117 @@
 					</div>
 				</section>
 				<section class="purchase">
-					<div class="purchase  text--heading">
+					<div class="purchase__block text--heading">
+
 						<h1>Purchase list</h1>
+						<hr class="purchase--divider">
+						<div class="purchase-list">
+							<div class="purchase card-mini">
+								<h2 class="text--card">ID437661</h2>
+								<h2 class="text--card">May 11, 2023, 14:21</h2>
+							</div>
+							<div class="card-mini">
+								<h2 class="text--card">AirOn ProCam</h2>
+								<h2 class="text--card">7/8 USB Type-C</h2>
+							</div>
+							<div class=" card-mini">
+								<h2 class="text--card">132.32 EUR</h2>
+								<h2 class="text--card text--red">Not paid</h2>
+							</div>
+							<div class=" card-mini">
+								<h2 class="text--card">Customer</h2>
+								<h2 class="text--card">robin@com.de</h2>
+							</div>
+
+						</div>
+						<hr class="purchase--divider">
+						<div class="purchase-list">
+							<div class="purchase card-mini">
+								<h2 class="text--card">ID437661</h2>
+								<h2 class="text--card">May 11, 2023, 14:21</h2>
+							</div>
+							<div class="card-mini">
+								<h2 class="text--card">PHILIPS Essential</h2>
+								<h2 class="text--card">HD9200/90</h2>
+							</div>
+							<div class=" card-mini">
+								<h2 class="text--card">543 USD</h2>
+								<h2 class="text--card text--green">Pay by Stripe</h2>
+							</div>
+							<div class=" card-mini">
+								<h2 class="text--card">Customer</h2>
+								<h2 class="text--card">dima@com.ua</h2>
+							</div>
+
+						</div>
 					</div>
-					<hr class="purchase--divider">
-					<div class="purchase purchase__block">
-						<div class="purchase purchase__block card-mini">
-							<h2 class="text--card">ID437661</h2>
-							<h2 class="text--card">May 11, 2023, 14:21</h2>
+					<div class="purchase__block text--heading">
+						<h1>Payment</h1>
+						<hr class="purchase--divider">
+						<div class="radio__block text--card">
+							<div>
+								<input type="radio" id="credit" name="card" value="credit" checked>
+								<label for="credit">Credit card</label>
+							</div>
+
+							<div>
+								<input type="radio" id="debit" name="card" value="debit">
+								<label for="debit">Debit card</label>
+							</div>
+
+							<div>
+								<input type="radio" id="payPal" name="card" value="payPal">
+								<label for="payPal">PayPal</label>
+							</div>
 						</div>
-						<div class="purchase purchase__block card-mini">
-							<h2 class="text--card">AirOn ProCam</h2>
-							<h2 class="text--card">7/8 USB Type-C</h2>
+						<div class="info__card text--card">
+							<div class="info__card  name__card">
+								<h2 class="text--card">Name on card</h2>
+								<input type="text" class="text field ">
+							</div>
+							<div class="info__card  name__card">
+								<h2 class="text--card">Credit card number</h2>
+								<input type="text" class="text field ">
+							</div>
+							<div class="info__card  name__card">
+								<h2 class="text--card">Expiration</h2>
+								<input type="text" class="text field">
+							</div>
+							<div class="info__card  name__card">
+								<h2 class="text--card">CVV</h2>
+								<input type="text" class="text field">
+							</div>
 						</div>
-						<div class="purchase purchase__block card-mini">
-							<h2 class="text--card">132.32 EUR</h2>
-							<h2 class="text--card text--red">Not paid</h2>
+						<hr class="purchase--divider">
+						<div class="info__card text--card">
+							<div class="info__card  name__card">
+								<h2 class="text--card">Country</h2>
+								<div class="relative click">
+									<div class="field field--select ">
+										<span class="text text--card">Choose...</span>
+										<select class="field__select">
+											<option value="USA">USA</option>
+											<option value="Uraine">Uraine</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="info__card  name__card">
+								<h2 class="text--card">State</h2>
+								<div class="relative click">
+									<div class="field field--select ">
+										<span class="text text--card">Choose...</span>
+										<select class="field__select  ">
+											<option value="USA">USA</option>
+										</select>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="purchase purchase__block card-mini">
-							<h2 class="text--card">Customer</h2>
-							<h2 class="text--card">robin@com.de</h2>
-						</div>
+						<hr class="purchase--divider">
+						<a href="#" class="checkout-button nav-button--active click">
+							<span class="text text--light">Continue to checkout</span>
+						</a>
 					</div>
 				</section>
 			</div>
